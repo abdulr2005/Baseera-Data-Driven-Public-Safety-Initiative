@@ -1,7 +1,7 @@
 # 🛡️ Baseera | بصيرة 
 ### **Empowering Communities through Data-Driven Insights**
 
-**[🔗 View Live Report | عرض التقرير المباشر]( https://github.com/abdulr2005/-Baseera-A-Vision-to-Save-Lives.git )**
+**[🔗 View Live Report | عرض التقرير المباشر]( https://abdulr2005.github.io/-Baseera-A-Vision-to-Save-Lives/ )**
 
 **Baseera** (Arabic for "Insight") is a data science initiative and public safety platform designed to combat the drug overdose crisis. This project transforms complex medical datasets and machine learning outcomes into clear, life-saving awareness tools for the general public.
 
