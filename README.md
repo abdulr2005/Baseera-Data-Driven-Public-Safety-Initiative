@@ -1,73 +1,80 @@
-# 🛡️ Baseera | بصيرة 
-### **Empowering Communities through Data-Driven Insights**
+# 🛡️ Baseera | بصيرة — Data Analysis & Machine Learning
 
-**[🔗 View Live Report | عرض التقرير المباشر]( https://abdulr2005.github.io/-Baseera-A-Vision-to-Save-Lives/ )**
+**Baseera** is a data-driven public-safety project that analyzes accidental drug-related mortality data and transforms the findings into accessible visual storytelling.
 
-**Baseera** (Arabic for "Insight") is a data science initiative and public safety platform designed to combat the drug overdose crisis. This project transforms complex medical datasets and machine learning outcomes into clear, life-saving awareness tools for the general public.
+This repository contains the **data analysis and machine-learning side** of Baseera. The findings are presented to a broader audience through a separate bilingual interactive web report.
 
----
+**[🌐 View the Interactive Report | عرض التقرير التفاعلي](https://abdulr2005.github.io/-Baseera-A-Vision-to-Save-Lives/)**  
+**[💻 View the Web Report Repository](https://github.com/abdulr2005/-Baseera-A-Vision-to-Save-Lives)**
 
-## 🚀 Project Overview
-This project analyzes over **9,200 records** of accidental drug-related deaths to identify trends, high-risk demographics, and lethal substance patterns.
+## 🎯 Project Overview
 
-### **Key Features:**
-* **Live Interactive Dashboard:** **[Explore the Report](YOUR_URL_HERE)**
-* **Visual Analytics:** Interactive trends showing the 300%+ surge in cases over the last decade.
-* **ML-Driven Insights:** Substance risk profiling using advanced classification models.* **ML-Driven Insights:** Substance risk profiling using advanced classification models.
-* **Bilingual Dashboard:** Fully responsive UI supporting both **Arabic and English**.
-* **Emergency Guide:** A practical "First Responder" guide for overdose situations (Narcan/Naloxone).
+The analysis uses more than **9,200 records** of accidental drug-related deaths to explore:
 
----
+- changes in mortality over time,
+- demographic patterns,
+- substances associated with recorded deaths,
+- and patterns that can be explored through machine-learning models.
+
+The overall workflow is:
+
+**Raw Data → Cleaning & Analysis → Feature Engineering → Machine Learning → Insights → Interactive Web Report**
 
 ## 🛠️ Technical Stack
-* **Data Science:** Python (Pandas, NumPy)
-* **Machine Learning:** Scikit-Learn, XGBoost, Imbalanced-Learn (SMOTE)
-* **Frontend:** HTML5, CSS3 (Sticky UI Architecture), JavaScript (ES6+, Intersection Observer API)
-* **Visualization:** Chart.js, Matplotlib, Seaborn
+
+- **Data Analysis:** Python, Pandas, NumPy
+- **Machine Learning:** Scikit-learn, XGBoost
+- **Imbalanced Learning:** SMOTE / Imbalanced-Learn
+- **Optimization:** GridSearchCV
+- **Dimensionality Reduction:** PCA
+- **Visualization:** Matplotlib, Seaborn
+- **Environment:** Jupyter Notebook
+
+## 🧠 Machine-Learning Workflow
+
+### Data preparation
+The project cleans and transforms the source data, engineers time-related information, and prepares features for modeling.
+
+### Imbalanced data
+**SMOTE** is used as part of the experimentation with class imbalance so minority cases are better represented during training.
+
+### Dimensionality reduction
+**PCA with 3 components** is explored as part of the modeling workflow.
+
+### Model optimization
+The project evaluates classification approaches and uses **GridSearchCV** for hyperparameter tuning. The strongest XGBoost experiment reached approximately **74% accuracy** while also considering recall during evaluation.
+
+## 📊 Selected Findings
+
+The dataset analysis highlighted several notable patterns:
+
+- **Fentanyl** was linked to more than **5,670 recorded cases**.
+- Approximately **74.2% of recorded victims were male**.
+- Recorded deaths increased from **355 in 2012** to more than **1,500 in 2021**.
+
+These are observations from the dataset analyzed in this project; they should be interpreted in the context of that dataset rather than as universal medical statistics.
+
+## 📂 Repository Contents
+
+- `Accidental_Drug_Related_Deaths.csv` — project dataset
+- `Accidental_Drug_Related_Deaths.ipynb` — analysis and machine-learning workflow
+- `README.md` — project documentation
+
+## 🚀 Run the Analysis
+
+```bash
+git clone https://github.com/abdulr2005/Baseera-Data-Driven-Public-Safety-Initiative.git
+cd Baseera-Data-Driven-Public-Safety-Initiative
+```
+
+Open `Accidental_Drug_Related_Deaths.ipynb` in Jupyter Notebook and run the analysis cells.
+
+## 🌐 From Analysis to Data Storytelling
+
+Instead of stopping at a notebook or static report, the project findings were transformed into a **bilingual Arabic/English interactive web experience** using HTML, CSS, JavaScript, and Chart.js.
+
+That presentation layer is maintained separately in the [Baseera web-report repository](https://github.com/abdulr2005/-Baseera-A-Vision-to-Save-Lives).
 
 ---
 
-## 🧠 Machine Learning Pipeline
-I implemented a robust engineering-first approach to handle real-world medical data:
-
-### **1. Data Engineering & Preprocessing**
-* **Feature Engineering:** Converted temporal data into Unix Timestamps to capture time-based growth.
-* **Handling Imbalance:** Applied **SMOTE** (Synthetic Minority Over-sampling Technique) to ensure the model learns from critical minority cases.
-* **Dimensionality Reduction:** Used **PCA (Principal Component Analysis)** with `n_components=3` to optimize model focus and reduce noise.
-
-### **2. Model Selection & Optimization**
-* **XGBoost (Champion Model):** Achieved an accuracy of **~74%** with high recall, optimized via **GridSearchCV** to prioritize public safety sensitivity.
-
----
-
-## 🎨 Frontend Highlights
-* **Lazy Loading Charts:** Graphs animate only when scrolled into view using the **Intersection Observer API**.
-* **Storytelling UI:** A sticky-section layout that guides the user from data facts to medical reality and finally to action steps.
-* **Localization Engine:** A custom JS-based translation system for seamless language switching.
-
----
-
-## 📊 Key Insights
-* **The Fentanyl Crisis:** Linked to over **5,670 cases**, making it the primary target for awareness.
-* **Gender Gap:** Statistics revealed that **74.2% of victims were male**, guiding targeted intervention strategies.
-* **Temporal Surge:** Deaths increased from **355 in 2012** to over **1,500 in 2021**.
-
----
-
-## 📂 Installation & Usage
-1.  **Clone the Repository:**
-    ```bash
-    git clone [https://github.com/abdulr2005/baseera.git](https://github.com/abdulr2005/baseera.git)
-    ```
-2.  **Run Analysis:** Open the Jupyter Notebook `Accidental_Drug_Related_Deaths.ipynb`.
-3.  **View Dashboard:** Launch `index.html` in any modern web browser.
-
----
-
-## 👨‍💻 Developed By
-**Abdulrahman El-Essawi**
-* *Data Science & Robotics Enthusiast*
-* [LinkedIn](https://www.linkedin.com/in/abdulrahmn-essawi-785543358/) | [GitHub](https://github.com/abdulr2005)
-
----
-*Disclaimer: This project is intended for educational and awareness purposes only. In case of emergency, always contact local medical services immediately.*
+> **Disclaimer:** This project is for educational, analytical, and awareness purposes. It is not medical advice or an emergency-response service.
